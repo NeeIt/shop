@@ -1,0 +1,11 @@
+
+export class Item {
+    name:string;
+    prise:number;
+    imgURL:string;
+    description:string;
+    gallery:string[];
+    categoryId:number;
+    tags?:string[];
+    id:number;
+}

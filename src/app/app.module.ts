@@ -1,8 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {  AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { fakeBackProvider } from './backend/backend';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ClientModule } from './client/client.module';
+
 
 @NgModule({
   declarations: [
@@ -10,9 +15,15 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule, 
+    ClientModule
   ],
-  providers: [],
+  providers: [
+    
+    fakeBackProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
