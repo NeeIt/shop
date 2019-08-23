@@ -16,8 +16,8 @@ export class ClientComponent implements OnInit {
   constructor(private navService:NavService,private router:Router) { }
 
   ngOnInit() {
-    this.checkUrl(window.location.href);
-    this.setPageMenu('home');
+    this.checkUrl(window.location.href.split('/')[3]);
+
     this.router.events.pipe(throttleTime(200)).subscribe((val) => {
       let url = val['url'].slice(1);
       this.checkUrl(url);
@@ -28,7 +28,7 @@ export class ClientComponent implements OnInit {
   }
   checkUrl(url){
 
-
+      
       this.navShow=true;
       this.setPageMenu(url);
   }
