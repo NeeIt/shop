@@ -19,10 +19,11 @@ export class ShopService {
     return this.http.get(environment.apiUrl+this.itemUrl+"/categoryId/"+id).pipe(catchError(this.handleError));
   }
 
-  getCategoryById(id:number){
+  getCategoryByKey(key:number|string){
     
-    return this.http.get(environment.apiUrl+this.categoryUrl+"/"+id).pipe(catchError(this.handleError));
+    return this.http.get(environment.apiUrl+this.categoryUrl+"/"+key).pipe(catchError(this.handleError));
   }
+  
     
   getItemById(id:number){
     return this.http.get(environment.apiUrl+this.itemUrl+"/"+id).pipe(catchError(this.handleError));

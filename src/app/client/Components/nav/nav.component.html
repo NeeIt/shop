@@ -1,0 +1,12 @@
+<nav class="nav">
+    <ul class="topNav">
+        <li class="point" *ngFor="let point of nav[0].points" routerLink="{{point.url}}" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact:
+            true}">{{point.name}}</li>
+    </ul>
+    <ul class="bottomNav">
+        <li class="point" *ngFor="let point of nav[1].points" routerLink="{{point.url}}">{{point.name}}</li>
+
+    </ul>
+    <div class="toTop" (click)="scrollTop()"></div>
+</nav>

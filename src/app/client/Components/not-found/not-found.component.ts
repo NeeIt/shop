@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NavService } from '../../services/nav.service';
 
 @Component({
   selector: 'app-not-found',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private navService:NavService) { }
 
   ngOnInit() {
+
   }
 
 }

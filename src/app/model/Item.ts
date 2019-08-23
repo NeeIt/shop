@@ -8,4 +8,5 @@ export class Item {
     categoryId:number;
     tags?:string[];
     id:number;
+    height?:number;
 }

@@ -1,1 +1,8 @@
 :host{  font-family: 'HK Grotesk Medium';    font-size:0.75em; min-height:100vh;letter-spacing: 0.15em;}
+.container{
+    display:flex;
+    .route{
+        width:100%;
+        margin:0 auto;
+    }
+}

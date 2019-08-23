@@ -1,0 +1,25 @@
+<div class="category">
+    <div class="mainItem" [ngStyle]="{'background-image':'url('+currentCategory.img+')'}">
+        <div class="mask" [ngStyle]="{'background-image': 'linear-gradient(0deg,rgba('+currentCategory.color+',1),rgba('+currentCategory.color+',0.5),rgba('+currentCategory.color+',1)' }">
+            <div class="title">{{currentCategory.title | uppercase}}</div>
+        </div>
+    </div>
+    <div class="items">
+
+        <div class="card" *ngFor="let item of items"
+            [ngStyle]="item.pos" >
+            <div class="img" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',1)'}">
+                <img src="{{item.imgURL}}" alt="{{item.name}}"  >
+            </div>
+            <div class="text">
+                <div class="title">{{item.name | uppercase}} </div>
+                <div class="coast">
+                    <div class="sum">${{item.prise}}</div>
+                    <div class="mark">Coasting</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+
+.block{
+    background-image: url('./404.png');
+    height:calc(100vh - 120px);
+    width:calc(100vw - 250px);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 0;
+    @media screen and (max-width:1080px){
+        width:100vw;
+    }
+}

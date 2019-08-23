@@ -34,13 +34,15 @@ export class FakeBackIntercaptor implements HttpInterceptor {
     );
     ////////////////////////////////////
     function handleRoute() {
-      console.log(req);
       switch (true) {
         case url.match(/\/items\/categoryId\/\d+$/) && method === "GET":
           return getItemsByCategory();
 
         case url.match(/\/categories\/\d+$/) && method === "GET":
           return getCategoryById();
+
+        case url.match(/\/categories\/\w+$/) && method === "GET":
+          return getCategoryByName();
 
         case url.match(/\/categories/) && method === "GET":
           return getCategories();
@@ -62,6 +64,10 @@ export class FakeBackIntercaptor implements HttpInterceptor {
       const cat = categories.find(x => x.id === idFromUrl());
       return ok(cat);
     }
+    function getCategoryByName() {
+      const cat = categories.find(x => x.name === nameFromUrl());
+      return ok(cat);
+    }
 
     function getCategories() {
       const cat = categories;
@@ -76,6 +82,10 @@ export class FakeBackIntercaptor implements HttpInterceptor {
     function idFromUrl() {
       const urlParts = url.split("/");
       return parseInt(urlParts[urlParts.length - 1]);
+    }
+    function nameFromUrl() {
+      const urlParts = url.split("/");
+      return urlParts[urlParts.length - 1];
     }
 
     function ok(body) {

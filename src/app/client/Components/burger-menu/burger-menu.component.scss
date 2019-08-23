@@ -1,0 +1,184 @@
+.menu {
+
+  transition: all 0.3s;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,1);
+  z-index: 99;
+  overflow: hidden;
+  &::after {
+    content: "";
+    display: block;
+    position: fixed;
+    background-color: #333;
+    border-radius: 100%;
+    width: 250%;
+    top: -375px;
+    left: -75%;
+    height: 500px;
+    z-index: 0;
+    animation: fromTop 0.3s;
+    transition: all 0.3s;
+    @keyframes fromTop {
+      from {
+        height: 0;
+        width: 0;
+        margin-left: 125%;
+      }
+      to {
+        height: 500px;
+        width: 250%;
+        margin-left: 0;
+      }
+    }
+  }
+  &.hide {
+      opacity:0;
+    &::after {
+      height: 0;
+      width: 0;
+      margin-left: 125%;
+    }
+  }
+
+  .logo svg {
+    margin: 30px;
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    z-index: 1;
+    position: relative;
+    animation: logo 0.3s;
+    @keyframes logo {
+      from {
+        margin: 20px;
+        width: 40px;
+        height: 40px;
+        fill: #333;
+      }
+      to {
+        margin: 30px;
+        width: 50px;
+        height: 50px;
+        fill: #fff;
+      }
+    }
+    transition: all 0.3s;
+    &.hide {
+      margin: 20px;
+      width: 40px;
+      height: 40px;
+      fill: #333;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    animation: circle2 0.3s;
+    @keyframes circle2 {
+      from {
+        top: 20px;
+        right: 55px;
+      }
+      to {
+        top: 35px;
+        right: 40px;
+      }
+    }
+    transition: all 0.3s;
+    &.hide {
+      top: 20px;
+      right: 55px;
+      &::after,
+      &::before {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: #333;
+      }
+    }
+  }
+
+  .close:before,
+  .close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 3px;
+    border-radius: 20px;
+    background-color: #fff;
+    animation: circle 0.3s;
+    transition: all 0.3s;
+    @keyframes circle {
+      from {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: #333;
+      }
+      to {
+        height: 33px;
+        border-radius: 20px;
+        width: 3px;
+        background-color: #fff;
+      }
+    }
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  .nav {
+    color: #777;
+    .active-link{
+        color:#333;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 140px);
+    @keyframes show {
+      from {
+        transform: translateX(-50%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+    transition: all 0.3s;
+    &.hide {
+      transform: translateX(-50%);
+    }
+    ul {
+      font-family: "HK Grotesk SemiBold";
+      word-spacing: 0.45em;
+      animation: show 0.3s;
+    }
+    .headerMenu {
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+    .currentMenu {
+      font-size: 0.7em;
+      line-height: 3em;
+      padding-inline-start: 0px;
+
+      margin-top: 40px;
+    }
+    .bottomMenu {
+      font-size: 0.9em;
+      line-height: 3em;
+    }
+  }
+}

@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
-import { CategoryComponent } from "./category/category.component";
+import { HomeComponent } from "./Components/home/home.component";
+import { CategoryComponent } from "./Components/category/category.component";
 import { ClientComponent } from "./client.component";
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
 
 const routes: Routes = [
     { path: "home", component: HomeComponent },
-    { path: "category", component: CategoryComponent },
+    { path: "category/:name", component: CategoryComponent },
     { path:'404',component:NotFoundComponent},
     { path: "", redirectTo: "home", pathMatch: "full" },
     { path:'**',redirectTo:'/404'}

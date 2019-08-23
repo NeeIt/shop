@@ -3,6 +3,7 @@ import { Item } from "../model/Item";
 export const ITEMS:Item[]=  [
     {
         id: 1,
+        height:3,
         categoryId:1,
         name: "guitar",
         prise: 300,
@@ -18,6 +19,7 @@ export const ITEMS:Item[]=  [
       {
         id: 2,
         categoryId:1,
+        height:2,
         name: "saxophone",
         prise: 450,
         imgURL:'./assets/items/saxophone/main.png',
@@ -32,6 +34,7 @@ export const ITEMS:Item[]=  [
       {
         id: 3,
         categoryId:2,
+        height:1,
         name: "piano bench",
         prise: 210,
         imgURL:'./assets/items/pianoBench/main.png',
@@ -44,6 +47,7 @@ export const ITEMS:Item[]=  [
       {
         id: 4,
         categoryId:2,
+        height:3,
         name: "music stand",
         prise: 50,
         imgURL:'./assets/items/musicStand/main.png',
@@ -52,5 +56,21 @@ export const ITEMS:Item[]=  [
         gallery: [
           `./assets/items/musicStand/gallery/img1.jpg`
         ]
+      },
+      {
+        id: 5,
+        categoryId:1,
+        height:1,
+        name: "drums",
+        prise: 450,
+        imgURL:'./assets/items/drums/main.png',
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/gallery/img1.jpg`,
+          `./assets/items/drums/gallery/img2.jpg`,
+          `./assets/items/drums/gallery/img3.jpg`
+        ]
       }
+      
   ];

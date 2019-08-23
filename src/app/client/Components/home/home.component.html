@@ -1,14 +1,5 @@
 <div class="main">
-    <nav class="nav">
-        <ul class="topNav" >
-            <li class="point" *ngFor="let point of nav[0].points">{{point.name}}</li>
-        </ul>
-        <ul class="bottomNav">
-                <li class="point" *ngFor="let point of nav[1].points">{{point.name}}</li>
-
-        </ul>
-        <div class="toTop"></div>
-    </nav>
+  
     <div class="categories">
         <div class="category"*ngFor="let category of categories">
             <div class="img">
@@ -16,9 +7,9 @@
                 <div class="tags"><span>Tags:</span>{{category.tags}}</div>
             </div>
             <div class="catContent">
-                <div class="title">{{category.name}}</div>
+                <div class="title">{{category.title}}</div>
                 <div class="description">{{category.description}}</div>
-                <button>MORE</button>
+                <button routerLink="/category/{{category.name}}">MORE</button>
             </div>
             
             
