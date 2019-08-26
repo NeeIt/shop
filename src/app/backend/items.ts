@@ -6,6 +6,7 @@ export const ITEMS:Item[]=  [
         height:3,
         categoryId:1,
         name: "guitar",
+        title: "Guitar",
         prise: 300,
         imgURL:'./assets/items/guitar/main.png',
         description:
@@ -21,6 +22,7 @@ export const ITEMS:Item[]=  [
         categoryId:1,
         height:2,
         name: "saxophone",
+        title: "Saxophone",
         prise: 450,
         imgURL:'./assets/items/saxophone/main.png',
         description:
@@ -35,7 +37,8 @@ export const ITEMS:Item[]=  [
         id: 3,
         categoryId:2,
         height:1,
-        name: "piano bench",
+        name: "pianoBench",
+        title: "Piano bench",
         prise: 210,
         imgURL:'./assets/items/pianoBench/main.png',
         description:
@@ -48,7 +51,8 @@ export const ITEMS:Item[]=  [
         id: 4,
         categoryId:2,
         height:3,
-        name: "music stand",
+        name: "musicStand",
+        title: "Music stand",
         prise: 50,
         imgURL:'./assets/items/musicStand/main.png',
         description:
@@ -62,7 +66,8 @@ export const ITEMS:Item[]=  [
         categoryId:1,
         height:1,
         name: "drums",
-        prise: 450,
+        title: "Drums",
+        prise: 320,
         imgURL:'./assets/items/drums/main.png',
         description:
           "Sweety drums",
@@ -70,6 +75,21 @@ export const ITEMS:Item[]=  [
           `./assets/items/drums/gallery/img1.jpg`,
           `./assets/items/drums/gallery/img2.jpg`,
           `./assets/items/drums/gallery/img3.jpg`
+        ]
+      },
+      {
+        id: 6,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
         ]
       }
       

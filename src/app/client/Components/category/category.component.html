@@ -7,19 +7,19 @@
     <div class="items">
 
         <div class="card" *ngFor="let item of items"
-            [ngStyle]="item.pos" >
+            [ngStyle]="item.pos" routerLink="/goods/{{item.name}}" >
             <div class="img" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',1)'}">
-                <img src="{{item.imgURL}}" alt="{{item.name}}"  >
+                <img src="{{item.imgURL}}" alt="{{item.title}}"  >
             </div>
             <div class="text">
                 <div class="title">{{item.name | uppercase}} </div>
                 <div class="coast">
-                    <div class="sum">${{item.prise}}</div>
+                    <div class="sum">{{item.prise}}</div>
                     <div class="mark">Coasting</div>
                 </div>
             </div>
         </div>
-
+        
 
     </div>
 </div>

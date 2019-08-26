@@ -27,9 +27,16 @@ export class ClientComponent implements OnInit {
     this.navService.setCurrent(url);
   }
   checkUrl(url){
-
+      if(url.indexOf('goods')!=-1){
+        this.navShow=false;
+      }
+      else{
+        this.navShow=true;
+      }
       
-      this.navShow=true;
+      
+      
+      
       this.setPageMenu(url);
   }
   hideBurger(event){

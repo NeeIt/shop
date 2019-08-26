@@ -1,0 +1,204 @@
+.main {
+  margin-top: -120px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  @media screen and (max-width: 888px) {
+    margin-top: 0px;
+  }
+}
+
+.face {
+  display: flex;
+  height: calc(100vh - 120px);
+  max-height: 900px;
+  z-index: 5;
+  justify-content: space-between;
+  position: relative;
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .img {
+    position: absolute;
+    padding: 120px 200px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0%);
+    transition: transform 0.3s;
+    &.desktop {
+      padding: 40px 200px;
+      @media screen and (max-width: 888px) {
+        padding: 80px 80px;
+        padding-bottom: 120px;
+      }
+      @media screen and (max-width: 600px) {
+        padding: 80px 20px;
+        padding-bottom: 120px;
+      }
+    }
+    @media screen and (max-width: 1080px) {
+      padding: 40px 200px;
+    }
+    @media screen and (max-width: 888px) {
+      padding: 80px 80px;
+      padding-bottom: 120px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 80px 20px;
+      padding-bottom: 120px;
+    }
+
+    img {
+      display: block;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      align-items: center;
+    }
+  }
+
+  .information {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: translateX(0%);
+    transition: transform 0.3s;
+    button {
+      padding: 0.8em 3em;
+      padding-top: 1em;
+    }
+    h2 {
+      display: flex;
+      flex-direction: column;
+      font-size: 2em;
+     
+      .categoryTitle {
+        color: white;
+      }
+      .itemTitle {
+        color: #333;
+      }
+    }
+    .prise {
+      color: #333;
+      font-weight: bold;
+    }
+  }
+  .gallery {
+    position: relative;
+    z-index: 1;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  button {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border-width: 0px;
+    font-family: "HK Grotesk Bold";
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+  }
+  .slide {
+    display: flex;
+    
+    .but {
+       
+      &.left {
+        transform: rotate(180deg);
+        margin-right:10px;
+      }
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 100%;
+      background-image: url("/assets/arrowBlack.png");
+      background-size: 10px 10px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      &.lock {
+        background-color: #333;
+        background-image: url("/assets/arrow.png");
+      }
+    }
+  }
+  .SlidingNext {
+    transform: translateX(100vw);
+    animation: next 0.3s ease-in-out;
+    @keyframes next {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      99% {
+        transform: translateX(-100vw);
+        opacity: 1;
+      }
+      99.5% {
+        transform: translateX(-100vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(100vw);
+      }
+    }
+  }
+  .SlidingPrev {
+    transform: translateX(-100vw);
+    animation: prev 0.3s ease-in-out;
+    @keyframes prev {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      99% {
+        transform: translateX(100vw);
+        opacity: 1;
+      }
+      99.5% {
+        transform: translateX(100vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(-100vw);
+      }
+    }
+  }
+}
+.loader {
+  position: absolute;
+  width:100px;
+  height:100px;
+  top: calc(50vh - 50px);
+  z-index: 20;
+  opacity: 0;
+  left:calc(50% - 50px);
+  transition: opacity 0.3s;
+
+  &.SlidingNext {
+
+    opacity: 1;
+  }
+  &.SlidingPrev {
+
+    opacity: 1;
+    
+    }
+  
+}

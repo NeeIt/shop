@@ -62,7 +62,7 @@ export class NavService {
       case 'home': this.currentMenu.next(this.homeMenu); break;
       case '404': this.currentMenu.next(this.menu404); break;
       case 'category':this.currentMenu.next(this.homeMenu); break;
-      default:  this.currentMenu.next(this.menu404); break;
+      default:  this.currentMenu.next({}); break;
     }
 
   }

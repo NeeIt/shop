@@ -29,6 +29,10 @@ export class ShopService {
     return this.http.get(environment.apiUrl+this.itemUrl+"/"+id).pipe(catchError(this.handleError));
   }
 
+  getItemByName(name:string){
+    return this.http.get(environment.apiUrl+this.itemUrl+"/"+name).pipe(catchError(this.handleError));
+  }
+
   getCategories():Observable<Category[]>{
     return this.http.get<Category[]>(environment.apiUrl+this.categoryUrl).pipe(catchError(this.handleError));
   }

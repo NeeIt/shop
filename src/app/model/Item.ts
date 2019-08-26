@@ -9,4 +9,5 @@ export class Item {
     tags?:string[];
     id:number;
     height?:number;
+    title:string;
 }

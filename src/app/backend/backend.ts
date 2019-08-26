@@ -47,8 +47,11 @@ export class FakeBackIntercaptor implements HttpInterceptor {
         case url.match(/\/categories/) && method === "GET":
           return getCategories();
 
-        case url.match(/\/items\/\d+$/) && method === "GET":
-          return getItemById();
+          case url.match(/\/items\/\d+$/) && method === "GET":
+            return getItemById();
+
+            case url.match(/\/items\/\w+$/) && method === "GET":
+          return getItemByName();
 
         default:
           return next.handle(req);
@@ -77,6 +80,25 @@ export class FakeBackIntercaptor implements HttpInterceptor {
     function getItemById() {
       const it = items.find(x => x.id === idFromUrl());
       return ok(it);
+    }
+    function getItemByName() {
+      let prev=null,now=null,next=null;
+      const it = items.find(x => x.name === nameFromUrl());
+      let id=it['categoryId'];
+      let catItem =items.filter(x => x.categoryId === id);
+      for(let i=0;i<catItem.length;i++){
+              
+        if(catItem[i]===it){
+          now=catItem[i];
+          if(i===0){prev=null}
+          else prev=catItem[i-1];
+          if(i===catItem.length-1){next=null}
+          else next=catItem[i+1];
+          break;
+        }
+        
+      }   
+      return ok([prev,now,next]);
     }
     ////////////////////////////////////
     function idFromUrl() {

@@ -1,46 +1,47 @@
 .nav {
-    display: flex;
-    position: sticky;
-    top: 0;
-    left: 0;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 0px;
-    margin-right: 40px;
-    text-transform: uppercase;
-    height: calc(100vh - 120px);
-    color: #777;
-    @media screen and (max-width: 1080px) {
-      display: none;
-    }
-    .active-link{
-      color:#333;
-    }
-    li{
-      cursor: pointer;
-    }
-    li:not(:last-of-type) {
-      margin-bottom: 20px;
-    }
-    
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 0px;
+  margin-right: 40px;
+  text-transform: uppercase;
+  height: calc(100vh - 120px);
+  color: #777;
+  @media screen and (max-width: 1080px) {
+    display: none;
   }
-  .toTop {
-    position: absolute;
-    bottom: -80px;
-    left: 40px;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    transform: rotate(-90deg);
-    background-image: url("./arrow.png");
-    background-size: 14px 14px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+  .active-link {
+    color: #333;
   }
-  
-  
+  li {
+    cursor: pointer;
+  }
+  li:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+.totopblock {
+  display: block;
+  position: absolute;
+  bottom: -120px;
+  padding: 40px;
+  transition: bottom 0.3s;
+}
+.toTop {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  transform: rotate(-90deg);
+  background-image: url("/assets/arrow.png");
+  background-size: 14px 14px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}

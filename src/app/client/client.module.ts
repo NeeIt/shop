@@ -10,6 +10,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { BurgerMenuComponent } from './Components/burger-menu/burger-menu.component';
 import { NavComponent } from './Components/nav/nav.component';
 import { NavService } from './services/nav.service';
+import { GoodsComponent } from './Components/goods/goods.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NavService } from './services/nav.service';
     NotFoundComponent,
     FooterComponent,
     BurgerMenuComponent,
-    NavComponent
+    NavComponent,
+    GoodsComponent
     
   ],
   imports: [CommonModule, ClientRoutingModule],

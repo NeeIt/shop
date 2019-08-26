@@ -1,0 +1,39 @@
+<div class="main">
+    <div class="face" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',1)'}">
+
+        <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',0.7)'}">
+            <h2>
+                <span class="categoryTitle">
+                    {{currentCategory.title}}
+                </span><span class="itemTitle">
+                    {{currentItem.title}}
+                </span>
+            </h2>
+            <div class="prise">
+                {{currentItem.prise}}
+            </div>
+            <div class="button">
+                <button>BUY</button>
+            </div>
+        </div>
+        <div class="img" [class.desktop]="currentItem.height>1"  [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
+            <div class="mask">
+
+            </div>
+            <img src="{{currentItem.imgURL}}" alt="{{currentItem.title}}">
+        </div>
+        <div class="gallery">
+
+            <div class="slide">
+                    <div class="but left" *ngIf="prevItemName" (click)="changeItem(prevItemName)"></div>
+                    <div class="but left lock" *ngIf="!prevItemName"></div>
+                    <div class="but right" *ngIf="nextItemName"(click)="changeItem(nextItemName)"></div>
+                    <div class="but right lock" *ngIf="!nextItemName"></div>
+            </div>
+        </div>
+    </div>
+    <img src="/assets/loader.svg" class="loader" alt="Loading..." [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
+    <div class="bottomNav">
+
+    </div>
+</div>

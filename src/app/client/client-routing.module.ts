@@ -4,11 +4,13 @@ import { HomeComponent } from "./Components/home/home.component";
 import { CategoryComponent } from "./Components/category/category.component";
 import { ClientComponent } from "./client.component";
 import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { GoodsComponent } from './Components/goods/goods.component';
 
 const routes: Routes = [
     { path: "home", component: HomeComponent },
     { path: "category/:name", component: CategoryComponent },
     { path:'404',component:NotFoundComponent},
+    { path:"goods/:name",component:GoodsComponent},
     { path: "", redirectTo: "home", pathMatch: "full" },
     { path:'**',redirectTo:'/404'}
 
