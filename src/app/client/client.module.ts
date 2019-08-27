@@ -11,6 +11,7 @@ import { BurgerMenuComponent } from './Components/burger-menu/burger-menu.compon
 import { NavComponent } from './Components/nav/nav.component';
 import { NavService } from './services/nav.service';
 import { GoodsComponent } from './Components/goods/goods.component';
+import { BottomNavDirective } from './Components/goods/bottom_nav.directive';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { GoodsComponent } from './Components/goods/goods.component';
     FooterComponent,
     BurgerMenuComponent,
     NavComponent,
-    GoodsComponent
+    GoodsComponent,
+    BottomNavDirective
+    
     
   ],
   imports: [CommonModule, ClientRoutingModule],

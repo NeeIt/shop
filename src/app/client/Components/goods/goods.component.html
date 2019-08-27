@@ -1,7 +1,8 @@
-<div class="main">
+<div class="main" [appBottomNav]="[bottomNav,preBottom]">
     <div class="face" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',1)'}">
 
-        <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',0.7)'}">
+        <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev"
+            [ngStyle]="{'background-color':'rgba('+currentCategory.color+',0.7)'}">
             <h2>
                 <span class="categoryTitle">
                     {{currentCategory.title}}
@@ -16,24 +17,39 @@
                 <button>BUY</button>
             </div>
         </div>
-        <div class="img" [class.desktop]="currentItem.height>1"  [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
-            <div class="mask">
+        <div class="img" [class.desktop]="currentItem.height>1" [class.SlidingNext]="SlidingNext"
+            [class.SlidingPrev]="SlidingPrev">
 
-            </div>
             <img src="{{currentItem.imgURL}}" alt="{{currentItem.title}}">
+        </div>
+        <div class="mask">
+
         </div>
         <div class="gallery">
 
             <div class="slide">
-                    <div class="but left" *ngIf="prevItemName" (click)="changeItem(prevItemName)"></div>
-                    <div class="but left lock" *ngIf="!prevItemName"></div>
-                    <div class="but right" *ngIf="nextItemName"(click)="changeItem(nextItemName)"></div>
-                    <div class="but right lock" *ngIf="!nextItemName"></div>
+                <div class="but left" *ngIf="prevItemName" (click)="changeItem(prevItemName)"></div>
+                <div class="but left lock" *ngIf="!prevItemName"></div>
+                <div class="but right" *ngIf="nextItemName" (click)="changeItem(nextItemName)"></div>
+                <div class="but right lock" *ngIf="!nextItemName"></div>
             </div>
         </div>
     </div>
-    <img src="/assets/loader.svg" class="loader" alt="Loading..." [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
-    <div class="bottomNav">
+    <img src="/assets/loader.svg" class="loader" alt="Loading..." [class.SlidingNext]="SlidingNext"
+        [class.SlidingPrev]="SlidingPrev">
+    <div class="bottomNav" #bottomNav>
+        <div class="preBottom" #preBottom>
+            <div class="bottomtext">
+                A better buying experience.
+            </div>
+            <div class="scroll">
+                <div class="scrollDown">
 
+                </div>
+                EXPLORE TRE STORE
+            </div>
+
+
+        </div>
     </div>
 </div>
