@@ -1,8 +1,7 @@
-<div class="main" [appBottomNav]="[bottomNav,preBottom]">
+<div class="main" [appBottomNav]="[bottomNav,preBottom,image,preloader,hiddenBlock]">
     <div class="face" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',1)'}">
 
-        <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev"
-            [ngStyle]="{'background-color':'rgba('+currentCategory.color+',0.7)'}">
+        <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
             <h2>
                 <span class="categoryTitle">
                     {{currentCategory.title}}
@@ -17,7 +16,7 @@
                 <button>BUY</button>
             </div>
         </div>
-        <div class="img" [class.desktop]="currentItem.height>1" [class.SlidingNext]="SlidingNext"
+        <div class="img" #image [class.desktop]="currentItem.height>1" [class.SlidingNext]="SlidingNext"
             [class.SlidingPrev]="SlidingPrev">
 
             <img src="{{currentItem.imgURL}}" alt="{{currentItem.title}}">
@@ -35,7 +34,7 @@
             </div>
         </div>
     </div>
-    <img src="/assets/loader.svg" class="loader" alt="Loading..." [class.SlidingNext]="SlidingNext"
+    <img src="/assets/loader.svg" class="loader" #preloader alt="Loading..." [class.SlidingNext]="SlidingNext"
         [class.SlidingPrev]="SlidingPrev">
     <div class="bottomNav" #bottomNav>
         <div class="preBottom" #preBottom>
@@ -50,6 +49,17 @@
             </div>
 
 
+        </div>
+        <div class="description" #hiddenBlock>
+            <div class="text">
+                <h2>{{currentItem.title}}</h2>
+                <p>{{currentItem.description}}</p>
+            </div>
+            <div class="other">
+                <div class="card" *ngFor="let card of rndItems" [ngStyle]="{'background-color':'rgb('+currentCategory.color+')'}">
+                    <img src="{{card.imgURL}}" alt="{{card.title}}" routerLink="/goods/{{card.name}}">
+                </div>
+            </div>
         </div>
     </div>
 </div>

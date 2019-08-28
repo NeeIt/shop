@@ -2,7 +2,7 @@ import { Item } from "../model/Item";
 
 export const ITEMS:Item[]=  [
     {
-        id: 1,
+        id: 0,
         height:3,
         categoryId:1,
         name: "guitar",
@@ -18,7 +18,7 @@ export const ITEMS:Item[]=  [
         ]
       },
       {
-        id: 2,
+        id: 1,
         categoryId:1,
         height:2,
         name: "saxophone",
@@ -34,7 +34,7 @@ export const ITEMS:Item[]=  [
         ]
       },
       {
-        id: 3,
+        id: 2,
         categoryId:2,
         height:1,
         name: "pianoBench",
@@ -48,7 +48,7 @@ export const ITEMS:Item[]=  [
         ]
       },
       {
-        id: 4,
+        id: 3,
         categoryId:2,
         height:3,
         name: "musicStand",
@@ -62,7 +62,7 @@ export const ITEMS:Item[]=  [
         ]
       },
       {
-        id: 5,
+        id: 4,
         categoryId:1,
         height:1,
         name: "drums",
@@ -78,7 +78,7 @@ export const ITEMS:Item[]=  [
         ]
       },
       {
-        id: 6,
+        id: 5,
         categoryId:3,
         height:1,
         name: "microphone",

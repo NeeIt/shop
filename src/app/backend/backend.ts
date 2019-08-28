@@ -34,6 +34,7 @@ export class FakeBackIntercaptor implements HttpInterceptor {
     );
     ////////////////////////////////////
     function handleRoute() {
+
       switch (true) {
         case url.match(/\/items\/categoryId\/\d+$/) && method === "GET":
           return getItemsByCategory();
@@ -47,11 +48,13 @@ export class FakeBackIntercaptor implements HttpInterceptor {
         case url.match(/\/categories/) && method === "GET":
           return getCategories();
 
-          case url.match(/\/items\/\d+$/) && method === "GET":
-            return getItemById();
+        case url.match(/\/items\/\d+$/) && method === "GET":
+          return getItemById();
 
-            case url.match(/\/items\/\w+$/) && method === "GET":
+        case url.match(/\/items\/\w+$/) && method === "GET":
           return getItemByName();
+        case url.match(/\/otherexcept\/.+$/) && method === "GET":
+          return getFiveRandom();
 
         default:
           return next.handle(req);
@@ -82,23 +85,58 @@ export class FakeBackIntercaptor implements HttpInterceptor {
       return ok(it);
     }
     function getItemByName() {
-      let prev=null,now=null,next=null;
+      let prev = null,
+        now = null,
+        next = null;
       const it = items.find(x => x.name === nameFromUrl());
-      let id=it['categoryId'];
-      let catItem =items.filter(x => x.categoryId === id);
-      for(let i=0;i<catItem.length;i++){
-              
-        if(catItem[i]===it){
-          now=catItem[i];
-          if(i===0){prev=null}
-          else prev=catItem[i-1];
-          if(i===catItem.length-1){next=null}
-          else next=catItem[i+1];
+      let id = it["categoryId"];
+      let catItem = items.filter(x => x.categoryId === id);
+      for (let i = 0; i < catItem.length; i++) {
+        if (catItem[i] === it) {
+          now = catItem[i];
+          if (i === 0) {
+            prev = null;
+          } else prev = catItem[i - 1];
+          if (i === catItem.length - 1) {
+            next = null;
+          } else next = catItem[i + 1];
           break;
         }
-        
-      }   
-      return ok([prev,now,next]);
+      }
+      return ok([prev, now, next]);
+    }
+    function getFiveRandom() {
+
+      let count = 0;
+      let rndIds = [];
+      
+      
+      let except = new Set(nameFromUrl().split(",").map(x=>parseInt(x)));
+
+
+      if(items.length-except.size<5){
+       for(let i=0;i<items.length;i++){
+        if(except.has(i))continue;
+        rndIds.push(i);
+       }
+      }else{
+        while (rndIds.length < 5) {
+          let num = Math.round(Math.random() * (items.length - 1));
+          if(except.has(num))continue;
+          rndIds.push(num);
+          rndIds = [...new Set(rndIds)];
+        }
+      }
+
+      let rndItems = items.filter(x =>{{
+        for(let i =0;i<rndIds.length;i++){
+          if(x.id===rndIds[i])return true;
+          
+        }
+        return false;
+      }});
+    
+      return ok(rndItems.sort((a,b)=>0.5-Math.random()));
     }
     ////////////////////////////////////
     function idFromUrl() {

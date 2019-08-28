@@ -14,12 +14,15 @@ export class HomeComponent implements OnInit {
   constructor(private shop: ShopService,private navService:NavService) {}
 
   private categories;
-  
+  private sub;
 
 
   ngOnInit() {
 
-    this.shop.getCategories().subscribe(cats => (this.categories = cats));
+    this.sub = this.shop.getCategories().subscribe(cats => (this.categories = cats));
+  }
+  ngOnDestroy(){
+    this.sub.unsubscribe();
   }
 
 }
