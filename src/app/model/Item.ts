@@ -10,4 +10,8 @@ export class Item {
     id:number;
     height?:number;
     title:string;
+    material:Array<string>;
+    size:Array<number>;
+    colors:Array<string>;
+    mainColor:string;
 }

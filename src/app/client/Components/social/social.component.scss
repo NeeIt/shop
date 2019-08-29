@@ -1,0 +1,25 @@
+
+  .social {
+    display: none;
+    @media screen and (hover: hover) and (pointer: fine) {
+      display: flex;
+    }
+    position: fixed;
+    z-index: 3;
+    bottom: 40px;
+    right: 40px;
+    justify-content: space-between;
+    height:50px;
+    flex-direction: column;
+    a{
+        display: block;
+        width: 10px;
+        height: 10px;
+        opacity: 0.7;
+
+    }
+    img {
+        width: 10px;
+        height: 10px;  
+    }
+  }

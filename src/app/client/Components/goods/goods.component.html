@@ -1,5 +1,5 @@
-<div class="main" [appBottomNav]="[bottomNav,preBottom,image,preloader,hiddenBlock]">
-    <div class="face" [ngStyle]="{'background-color':'rgba('+currentCategory.color+',1)'}">
+<div class="main" [appBottomNav]="[bottomNav,preBottom,image,preloader,hiddenBlock,mainText,more]">
+    <div class="face" [ngStyle]="{'background-color':currentItem.mainColor}">
 
         <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
             <h2>
@@ -50,16 +50,47 @@
 
 
         </div>
-        <div class="description" #hiddenBlock>
+        <div class="more" #more>
             <div class="text">
-                <h2>{{currentItem.title}}</h2>
-                <p>{{currentItem.description}}</p>
-            </div>
-            <div class="other">
-                <div class="card" *ngFor="let card of rndItems" [ngStyle]="{'background-color':'rgb('+currentCategory.color+')'}">
-                    <img src="{{card.imgURL}}" alt="{{card.title}}" routerLink="/goods/{{card.name}}">
+                <div class="mainText" #mainText>
+                    <h2>Intro</h2>
+                    <p class="description">{{currentItem.description}}</p>
                 </div>
+
+                <div class="state" #hiddenBlock>
+                    <h2>Product detail</h2>
+                    <div class="groups">
+                        <div class="group">
+                            <div class="groupTitle">Size</div>
+                            <div class="groupInfo" *ngIf="currentItem && currentItem.size">
+                                {{currentItem.size.join("x")}}
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="groupTitle">Color</div>
+                            <div class="groupInfo">
+                                <div class="color" *ngFor="let color of currentItem.colors"
+                                    [ngStyle]="{'background-color':color}"></div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="groupTitle">Material</div>
+                            <div class="groupInfo">
+                                <span *ngFor="let material of currentItem.material">
+                                    {{material}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>    
+
+                </div>
+               
             </div>
+            <!-- <div class="social" #social>
+                    <a href="https://www.facebook.com/musicshopinverness/" target="_blank"><img src="./assets/facebook.png" alt="faebook" /></a>
+                    <a href="https://twitter.com/myartsmusic" target="_blank"><img src="./assets/twitter.png" alt="twitter" /></a>
+                    <a href="https://www.pinterest.ru/IMCTucson/" target="_blank"><img src="./assets/pinterest.png" alt="pinterest" /></a>
+            </div> -->
         </div>
     </div>
 </div>

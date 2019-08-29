@@ -67,7 +67,7 @@ export class GoodsComponent implements OnInit {
         this.rndItems=[];
         this.rndIds=[];
         this.rndIds.push(this.currentItem.id);
-        this.getRnd();
+        
 
         this.shopService.getCategoryByKey(this.currentItem.categoryId).subscribe(cat=>{
           this.currentCategory=cat;

@@ -9,6 +9,10 @@ export const ITEMS:Item[]=  [
         title: "Guitar",
         prise: 300,
         imgURL:'./assets/items/guitar/main.png',
+        material:['wood','metal','plastic'],
+        mainColor:'#eedeab',
+        colors:['#BD752B','#0C0E0D',"#DFC683"],
+        size:[50,20,34],
         description:
           "It's my first guitar. I love it. I hope You'll love it as much as I do.",
         gallery: [
@@ -25,8 +29,12 @@ export const ITEMS:Item[]=  [
         title: "Saxophone",
         prise: 450,
         imgURL:'./assets/items/saxophone/main.png',
+        material:['metal'],
+        mainColor:'#F2D2AC',
+        colors:["#E3B863"],
+        size:[50,20,34],
         description:
-          "I bought it when I was sixteen. It sound prety good",
+          "I bought it when I was sixteen. It sound prety good. I bought it when I was sixteen. It sound prety good. I bought it when I was sixteen. It sound prety good. I bought it when I was sixteen. It sound prety good",
         gallery: [
           `./assets/items/saxophone/gallery/img1.jpg`,
           `./assets/items/saxophone/gallery/img2.jpg`,
@@ -41,6 +49,10 @@ export const ITEMS:Item[]=  [
         title: "Piano bench",
         prise: 210,
         imgURL:'./assets/items/pianoBench/main.png',
+        material:['wood','leather'],
+        mainColor:'#eedeab',
+        colors:["#191E18"],
+        size:[50,20,34],
         description:
           "It's softer then you think",
         gallery: [
@@ -55,6 +67,10 @@ export const ITEMS:Item[]=  [
         title: "Music stand",
         prise: 50,
         imgURL:'./assets/items/musicStand/main.png',
+        material:['metal'],
+        mainColor:'#F7CBCC',
+        colors:["#191E18"],
+        size:[50,20,34],
         description:
           "I CAN'T BELIVE THAT I AM OVNER OF THIS NOTE STAND!!!!",
         gallery: [
@@ -69,6 +85,10 @@ export const ITEMS:Item[]=  [
         title: "Drums",
         prise: 320,
         imgURL:'./assets/items/drums/main.png',
+        material:['wood','metal'],
+        mainColor:'#B0CBDC',
+        colors:["#638EB8","#212121","#A3AAB2"],
+        size:[50,20,34],
         description:
           "Sweety drums",
         gallery: [
@@ -85,6 +105,10 @@ export const ITEMS:Item[]=  [
         title: "Microphone",
         prise: 50,
         imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
         description:
           "Sweety drums",
         gallery: [

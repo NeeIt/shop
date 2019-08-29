@@ -12,10 +12,9 @@ import { ClientModule } from './client/client.module';
 
 
 
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
