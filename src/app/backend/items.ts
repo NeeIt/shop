@@ -34,7 +34,7 @@ export const ITEMS:Item[]=  [
         colors:["#E3B863"],
         size:[50,20,34],
         description:
-          "I bought it when I was sixteen. It sound prety good. I bought it when I was sixteen. It sound prety good. I bought it when I was sixteen. It sound prety good. I bought it when I was sixteen. It sound prety good",
+          "I bought it when I was sixteen. It sound prety good. ",
         gallery: [
           `./assets/items/saxophone/gallery/img1.jpg`,
           `./assets/items/saxophone/gallery/img2.jpg`,

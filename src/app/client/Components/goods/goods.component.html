@@ -1,4 +1,4 @@
-<div class="main" [appBottomNav]="[bottomNav,preBottom,image,preloader,hiddenBlock,mainText,more]">
+<div class="main" [appBottomNav]="[bottomNav,preBottom,image,preloader,hiddenBlock,mainText,more,social]">
     <div class="face" [ngStyle]="{'background-color':currentItem.mainColor}">
 
         <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
@@ -86,11 +86,12 @@
                 </div>
                
             </div>
-            <!-- <div class="social" #social>
-                    <a href="https://www.facebook.com/musicshopinverness/" target="_blank"><img src="./assets/facebook.png" alt="faebook" /></a>
-                    <a href="https://twitter.com/myartsmusic" target="_blank"><img src="./assets/twitter.png" alt="twitter" /></a>
-                    <a href="https://www.pinterest.ru/IMCTucson/" target="_blank"><img src="./assets/pinterest.png" alt="pinterest" /></a>
-            </div> -->
+            
+        </div>
+        <div class="social" #social>
+                <a href="https://www.facebook.com/musicshopinverness/" target="_blank"><img src="./assets/facebook.png" alt="faebook" /></a>
+                <a href="https://twitter.com/myartsmusic" target="_blank"><img src="./assets/twitter.png" alt="twitter" /></a>
+                <a href="https://www.pinterest.ru/IMCTucson/" target="_blank"><img src="./assets/pinterest.png" alt="pinterest" /></a>
         </div>
     </div>
 </div>

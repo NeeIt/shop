@@ -70,6 +70,7 @@
   }
 
   .information {
+
     position: relative;
     z-index: 1;
     padding: 40px;
@@ -204,15 +205,15 @@
   }
 }
 .bottomNav {
-  display: flex;
-  flex-direction: column;
+
   overflow: hidden;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   font-size: 0.9em;
-  padding: 40px;
+  padding: 0 40px;
   @media screen and (max-width:600px){
     padding:0px;
   }
+
   min-height: 120px;
   width: 100%;
   bottom: 0;
@@ -256,6 +257,7 @@
     position: relative;
     line-height: 40px;
     opacity: 1;
+    padding-top:40px;
     transition: opacity 0.5s;
     @media (hover: none) and (pointer: coarse) {
       display: none;
@@ -293,20 +295,30 @@
   }
 
   .more {
+    height:calc(100% - 40px);
     position: relative;
     padding:20px;
+    padding-bottom:80px;
     max-width:600px;
-    height:100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
     overflow: hidden;
+    @media screen and (max-width:888px){
+      overflow-y: scroll;
+    }
+    @media screen and (max-width:600px){
+      padding-bottom:40px;
+    }
+    overflow-x: hidden;
     color: #333;
     margin: 0 auto;
+    padding-bottom: 0;
+    @media (hover: none) and (pointer: coarse) {
     margin-top:40px;
-    flex-direction: column;
-    justify-content: space-between;
+    }
     .text {
       width: calc(100% - 80px);
+      @media screen and (max-width:600px) {
+        width:100%;
+      }
       .mainText {
         @media (hover: hover) and (pointer: fine) {
           opacity: 0;
@@ -328,16 +340,15 @@
       .state {
         display: none;
         flex-direction: column;
-
         opacity: 0;
         animation: showDescription 0.8s ease-out  forwards;
-
+        
         .group {
           font-size: 1.2em;
           display: flex;
           align-items: center;
           height: 60px;
-          max-width:400px;
+          max-width:600px;
 
           border-top: 1px solid #ccc;
           &Title {
@@ -395,13 +406,23 @@
   }
 }
 .social {
+  margin:0 auto;
   position: absolute;
-  bottom:0;
-  display: flex;
+  bottom:0px;
+  padding:40px;
+  @media screen and (max-width : 600px){
+  padding:20px; 
+  }
+  display: none;
+  background-color: white;
+  width:100%;
+  
   z-index: 3;
   justify-content: space-between;
-  height:50px;
+
   justify-content: flex-start;
+  opacity: 0;
+  transition: opacity 0.3s;
   animation: showDescription 0.8s 0.3s ease-out forwards;
   a{
       display: block;

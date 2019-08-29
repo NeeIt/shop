@@ -39,7 +39,6 @@ export class BottomNavDirective {
     this.setPos(e.deltaY);
   }
 
-
   @HostListener("touchstart", ["$event"]) onWTouchStart(e) {
     if (
       //Если закрыто и зажато куда угодно в блоке, то он переходит в isWrapping
@@ -68,7 +67,7 @@ export class BottomNavDirective {
   //Промежуточная позиция во время toucheMove
   private setPosPhone() {
     
-    let height,opacity,imageMargin;
+    let height,opacity,contentDisplay;
 
     if (!this.isOpen) {
 
@@ -82,11 +81,13 @@ export class BottomNavDirective {
       height = this.wrapheight > this.maxHeight ? this.maxHeight : this.wrapheight;
     }
 
-    imageMargin = -height/4
+    contentDisplay = height>300?"flex":"none";
+    
     opacity = 1-height/(this.maxHeight-this.minWrapHeight);
     this.renderer.setStyle(this.appBottomNav[0], "transition", "all 0.1s");
     this.renderer.setStyle(this.appBottomNav[0], "height", height + "px");
     this.renderer.setStyle(this.appBottomNav[1], "opacity", opacity);
+    this.renderer.setStyle(this.appBottomNav[4], "display", contentDisplay);
     
   }
 
@@ -104,7 +105,7 @@ export class BottomNavDirective {
     this.imageOpacity =   val > 0 ? 0.5:1;
     let titleOpactity  =  val > 0 ? 1:null;
     let lineheight =      val > 0 ? "10px":"40px";
-    this.overflow =       val > 0 ? "auto":"hidden";
+    this.overflow =       val > 0 ? null:"hidden";
 
     this.preOpacity = val > 0 ? 0 : 1;
     this.renderer.setStyle(this.appBottomNav[0], "transition", "all 0.5s ease-out");
@@ -115,10 +116,11 @@ export class BottomNavDirective {
     this.renderer.setStyle(this.appBottomNav[2],"opacity",this.imageOpacity);
     this.renderer.setStyle(this.appBottomNav[3],"top","calc(50vh + "+(this.imageMargin-110) + "px)");
     this.renderer.setStyle(this.appBottomNav[4], "display", this.contentDisplay);
-    this.renderer.setStyle(this.appBottomNav[4], "height", this.height-80 + "px");
+    this.renderer.setStyle(this.appBottomNav[4], "height", this.height-200 + "px");
     this.renderer.setStyle(this.appBottomNav[5], "opacity", titleOpactity);
     this.renderer.setStyle(this.appBottomNav[6], "overflow", this.overflow);
-
+    this.renderer.setStyle(this.appBottomNav[6], "overflow", this.overflow);
+    this.renderer.setStyle(this.appBottomNav[7], "display", this.contentDisplay);
     
   }
 }
