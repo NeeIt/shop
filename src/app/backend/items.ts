@@ -115,6 +115,804 @@ export const ITEMS:Item[]=  [
           `./assets/items/drums/microphone/img1.jpg`,
           `./assets/items/drums/microphone/img2.jpg`
         ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
+      },
+      {
+        id: 5,
+        categoryId:3,
+        height:1,
+        name: "microphone",
+        title: "Microphone",
+        prise: 50,
+        imgURL:'./assets/items/microphone/main.png',
+        material:['wood','metal'],
+        mainColor:'#eedeab',
+        colors:["#232524","#828483"],
+        size:[50,20,34],
+        description:
+          "Sweety drums",
+        gallery: [
+          `./assets/items/drums/microphone/img1.jpg`,
+          `./assets/items/drums/microphone/img2.jpg`
+        ]
       }
       
   ];

@@ -147,12 +147,13 @@ export class FakeBackIntercaptor implements HttpInterceptor {
       let done=false;
       let x = idFromUrl();
       let its=[];
-      from(items).pipe(skip(x*20),take(20),toArray(),defaultIfEmpty(null)).subscribe(x=>{
-        its.push(x);
-
+      
+      from(items).pipe(skip(x*20),take(20),defaultIfEmpty(null)).subscribe(y=>{
+        its.push(y);
+        
       })
-
-      return ok(its[0]);
+      
+      return ok(its);
       
       
     }

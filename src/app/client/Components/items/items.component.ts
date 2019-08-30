@@ -13,13 +13,13 @@ export class ItemsComponent implements OnInit {
   constructor(private shopService:ShopService) { }
 
   ngOnInit() {
-    this.getTwentyItems();
+    this.getTwentyItems();this.getTwentyItems();this.getTwentyItems();
   }
   getTwentyItems(){
 
-    this.shopService.getTwenty(this.culcPacks).subscribe((x:Array<any>)=>{
+    let a = this.shopService.getTwenty(this.culcPacks++).subscribe((x:Array<any>)=>{
       this.items.push(...x);
-      this.culcPacks++;
+      a.unsubscribe();
 
     });
     
