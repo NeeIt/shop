@@ -13,6 +13,7 @@ import { NavService } from './services/nav.service';
 import { GoodsComponent } from './Components/goods/goods.component';
 import { BottomNavDirective } from './Components/goods/bottom_nav.directive';
 import { SocialComponent } from './Components/social/social.component';
+import { ItemsComponent } from './Components/items/items.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SocialComponent } from './Components/social/social.component';
     NavComponent,
     GoodsComponent,
     SocialComponent,
-    BottomNavDirective
+    BottomNavDirective,
+    ItemsComponent
     
     
   ],

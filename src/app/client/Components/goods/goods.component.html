@@ -1,8 +1,8 @@
-<div class="main" [appBottomNav]="[bottomNav,preBottom,image,preloader,hiddenBlock,mainText,more,social]">
+<div class="main" [appBottomNav]="[bottomNav,preBottom,image,preloader,hiddenBlock,mainText,more,social,information]">
     <div class="face" [ngStyle]="{'background-color':currentItem.mainColor}">
 
-        <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev">
-            <h2>
+        <div class="information" [class.SlidingNext]="SlidingNext" [class.SlidingPrev]="SlidingPrev" >
+            <h2 #information>
                 <span class="categoryTitle">
                     {{currentCategory.title}}
                 </span><span class="itemTitle">

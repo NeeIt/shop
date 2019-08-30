@@ -25,7 +25,8 @@ export class BottomNavDirective {
   private isOpen = false;
   private contentDisplay="none";
   private overflow="hidden";
-
+  private textMargin = 20;
+  private socialBottom = -40;
 
   //Для телефона
   private isWrapping = false;
@@ -51,10 +52,11 @@ export class BottomNavDirective {
   }
 
   @HostListener("touchend", ["$event"]) onTouchend(e) {
+    console.log(window.innerHeight/10 , -window.innerHeight/5)
     if (this.isWrapping) {
       this.isWrapping = false;
       //Установить окончательную позицию
-      this.setPos(this.startTouch - this.endTouch + (this.isOpen ? 80 : -150));
+      this.setPos(this.startTouch - this.endTouch + (this.isOpen ? innerHeight/10 : -innerHeight/10 ));
     }
   }
   @HostListener("touchmove", ["$event"]) onTouchmove(e) {
@@ -67,7 +69,7 @@ export class BottomNavDirective {
   //Промежуточная позиция во время toucheMove
   private setPosPhone() {
     
-    let height,opacity,contentDisplay;
+    let height,opacity,contentDisplay,socialBottom;
 
     if (!this.isOpen) {
 
@@ -80,15 +82,18 @@ export class BottomNavDirective {
       this.wrapheight = this.maxHeight + this.startTouch - this.endTouch;
       height = this.wrapheight > this.maxHeight ? this.maxHeight : this.wrapheight;
     }
+    socialBottom =  -(this.maxHeight-height);
+    if (socialBottom>0)socialBottom=0;
 
     contentDisplay = height>300?"flex":"none";
-    
+    console.log(0-this.maxHeight-height)
     opacity = 1-height/(this.maxHeight-this.minWrapHeight);
     this.renderer.setStyle(this.appBottomNav[0], "transition", "all 0.1s");
     this.renderer.setStyle(this.appBottomNav[0], "height", height + "px");
     this.renderer.setStyle(this.appBottomNav[1], "opacity", opacity);
     this.renderer.setStyle(this.appBottomNav[4], "display", contentDisplay);
-    
+    this.renderer.setStyle(this.appBottomNav[7], "bottom", socialBottom+"px");
+    this.renderer.setStyle(this.appBottomNav[7], "display", contentDisplay);
   }
 
   //Конечная позиция
@@ -102,10 +107,13 @@ export class BottomNavDirective {
     this.scale =          val > 0 ? 0.7 : 1;
     this.imageMargin =    val > 0 ? -this.maxHeight/4 : 0;
     this.contentDisplay = val > 0 ? "flex":"none";
-    this.imageOpacity =   val > 0 ? 0.5:1;
+    this.imageOpacity =   val > 0 ? 0.4:1;
     let titleOpactity  =  val > 0 ? 1:null;
     let lineheight =      val > 0 ? "10px":"40px";
     this.overflow =       val > 0 ? null:"hidden";
+    this.textMargin =     val > 0 ? (window.innerHeight<666)?20:this.height-180: 20;
+    this.socialBottom =   val> 0  ? -(this.maxHeight-this.height) : -40;
+    console.log(this.socialBottom+"px");
 
     this.preOpacity = val > 0 ? 0 : 1;
     this.renderer.setStyle(this.appBottomNav[0], "transition", "all 0.5s ease-out");
@@ -119,8 +127,9 @@ export class BottomNavDirective {
     this.renderer.setStyle(this.appBottomNav[4], "height", this.height-200 + "px");
     this.renderer.setStyle(this.appBottomNav[5], "opacity", titleOpactity);
     this.renderer.setStyle(this.appBottomNav[6], "overflow", this.overflow);
-    this.renderer.setStyle(this.appBottomNav[6], "overflow", this.overflow);
+    this.renderer.setStyle(this.appBottomNav[7], "bottom",  this.socialBottom+"px");
     this.renderer.setStyle(this.appBottomNav[7], "display", this.contentDisplay);
+    this.renderer.setStyle(this.appBottomNav[8], "margin-bottom", this.textMargin+"px");
     
   }
 }

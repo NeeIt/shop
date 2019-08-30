@@ -39,6 +39,10 @@ export class ShopService {
   getRandomFiveItems(ids:Array<number>):Observable<Category[]>{
     return this.http.get<Category[]>("/otherexcept/"+ids).pipe(catchError(this.handleError));
   }
+  getTwenty(n:number){
+ 
+    return this.http.get(this.itemUrl+"/pack/"+n).pipe(catchError(this.handleError));
+  }
 
   handleError<T>(operation='operation',result?:T){
     return (error:any):Observable<T>=>{

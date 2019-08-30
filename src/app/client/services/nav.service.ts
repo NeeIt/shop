@@ -14,8 +14,8 @@ export class NavService {
   private homeMenu = {
     name: "topBar",
     points: [
-      { url: "#", name: "BLOG" },
-      { url: "#", name: "MAGAZINE" },
+      { url: "/home", name: "CATEGORIES" },
+      { url: "/list", name: "GOODS LIST" },
       { url: "#", name: "GALLERY" },
       { url: "#", name: "SOCIAL" }
     ]
@@ -54,7 +54,7 @@ export class NavService {
     return this.observe;
   }
   setCurrent(str){
-    console.log(str);
+   
     //  category/instruments -> category
     str=(str.split('/').length>1 && str.split('/')[1]!="(%23)")?str.split('/')[0]:str;
     switch(str){

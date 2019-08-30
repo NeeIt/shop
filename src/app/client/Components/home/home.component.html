@@ -3,6 +3,7 @@
     <div class="categories">
         <div class="category"*ngFor="let category of categories">
             <div class="img">
+
                 <img src="{{category.img}}" alt="{{category.name}} img" class="categoryImg" routerLink="/category/{{category.name}}" >
                 <div class="tags"><span>Tags:</span>{{category.tags}}</div>
             </div>

@@ -7,12 +7,13 @@ import {
   HttpInterceptor,
   HTTP_INTERCEPTORS
 } from "@angular/common/http";
-import { Observable, of, throwError } from "rxjs";
-import { mergeMap, materialize, delay, dematerialize } from "rxjs/operators";
+import { Observable, of, throwError, from } from "rxjs";
+import { mergeMap, materialize, delay, dematerialize, skip, defaultIfEmpty, toArray, take } from "rxjs/operators";
 import { Item } from "../model/Item";
 import { Category } from "../model/Category";
 import { CATEGORIES } from "./categories";
 import { ITEMS } from "./items";
+import { isNgTemplate } from '@angular/compiler';
 
 let categories: Category[] =
   JSON.parse(localStorage.getItem("categories")) || CATEGORIES;
@@ -53,8 +54,12 @@ export class FakeBackIntercaptor implements HttpInterceptor {
 
         case url.match(/\/items\/\w+$/) && method === "GET":
           return getItemByName();
+
         case url.match(/\/otherexcept\/.+$/) && method === "GET":
           return getFiveRandom();
+
+          case url.match(/\/items\/pack\/\d+$/) && method === "GET":
+            return getTwenty();  
 
         default:
           return next.handle(req);
@@ -137,6 +142,19 @@ export class FakeBackIntercaptor implements HttpInterceptor {
       }});
     
       return ok(rndItems.sort((a,b)=>0.5-Math.random()));
+    }
+    function getTwenty(){
+      let done=false;
+      let x = idFromUrl();
+      let its=[];
+      from(items).pipe(skip(x*20),take(20),toArray(),defaultIfEmpty(null)).subscribe(x=>{
+        its.push(x);
+
+      })
+
+      return ok(its[0]);
+      
+      
     }
     ////////////////////////////////////
     function idFromUrl() {
